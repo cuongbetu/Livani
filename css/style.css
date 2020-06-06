@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Cabin:wght@700&display=swap');
 body {
     font-family: 'Lato', sans-serif;
+    background-color: #FFFFFF;
 }
 
 .top-header {
@@ -66,6 +67,10 @@ body {
     justify-content: flex-end;
 }
 
+.top-header .header-top-menu li:hover{
+    color: #FE7981;
+}
+
 .top-header .header-top-menu li:not(:last-child)::after {
     content: "|";
     margin: 8px;
@@ -77,6 +82,7 @@ body {
     height: auto;
     margin: 0;
     padding: 10px 0;
+    background-color: #fff;
 }
 
 .main-nav .my-nav {
@@ -116,7 +122,7 @@ body {
 .categories-banner-area {
     width: 100%;
     height: 100%;
-    padding: 4em 10px;
+    padding: 4em 0;
 }
 
 .categories-banner-area .banner-area {
@@ -129,9 +135,17 @@ body {
 
 .categories-banner-area .banner-area .banner-area-links {
     margin: 0 10px;
-    width: calc(25% - 20px);
+    width: calc(25% - 15px);
     position: relative;
     overflow: hidden;
+}
+
+.categories-banner-area .banner-area .banner-area-links:first-child{
+    margin-left: 0;
+}
+
+.categories-banner-area .banner-area .banner-area-links:last-child{
+    margin-right: 0;
 }
 
 .categories-banner-area .banner-area .banner-area-links a {
@@ -215,6 +229,8 @@ body {
     position: relative;
     display: block;
     overflow: hidden;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
 }
 
 .product-area .product-list .product-image .hover-img{
@@ -230,21 +246,39 @@ body {
     transform: scale(.9);
 }
 
+.product-area .product-list .product-image .sale{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 80%;
+    z-index: 5;
+    width: 100%;
+    height: auto;
+}
+
+.product-area .product-list .product-image .sale .sale-info{
+    width: 20%;
+    height: auto;
+    text-align: center;
+    background-color: red;
+}
+
+.product-area .product-list .product-image .sale .sale-info span{
+    color: #fff;
+}
 
 .product-area .product-list .product-image .overlay{
     position: absolute;
     right: -8%;
     bottom: 70%;
-    transition: .6s;
+    transition: 1.1s;
 }
-
-
 
 .product-area .product-list .product-image:hover .overlay{
     right: 0;
+    z-index: 10;
 }
-
-
 
 .product-area .product-list .product-image .overlay ul {
     padding:10px;
@@ -262,12 +296,16 @@ body {
 .product-area .product-content a h3 {
     color: #000;
     font-family: 'Cabin', sans-serif;
+    transition: .6s;
+}
+
+.product-area .product-content a h3:hover{
+    color: #FE7981;
 }
 
 .product-area .product-content a:hover {
     text-decoration: none;
 }
-
 
 .product-area .product-content .price .add-to-cart{
     visibility:hidden;
@@ -286,3 +324,126 @@ body {
 .product-area .product-content:hover .price .add-to-cart{
     visibility: visible;
 }
+
+.background-attackment{
+    position: relative;
+    width: 100%;
+    min-height: 40em;
+    background-image: url("../images/offer-background/offer.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    object-fit: cover;
+}
+
+.background-attackment .overlay-background-attackment{
+    position: absolute;
+    display: block;
+    padding: 10px;
+    width: 50%;
+    height: 100%;
+    top: 20%;
+    left: 0;
+    
+}
+
+.background-attackment .overlay-background-attackment .overlay-content{
+    border: 1px solid #fff;
+    border-radius: 10px;
+    background-color: #fff;
+    width:70%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background-attackment .overlay-background-attackment .overlay-content label{
+   color: #FE7981;
+}
+
+.background-attackment .overlay-background-attackment .overlay-content h2{
+    font-family: "Cabin";
+}
+
+.background-attackment .overlay-background-attackment .overlay-content span{
+   font-size: 15px;
+   color: #000;
+}
+
+.background-attackment .overlay-background-attackment .overlay-content a{
+   display: flex;
+   flex-direction: column;
+   padding: 10px 30px;
+   margin-top:30px;
+   text-align: center;
+   width: auto;
+   height: auto;
+   color: #fff;
+   background-color: #FE7981;
+   text-decoration: none;
+   transition: .8s;
+}
+
+.background-attackment .overlay-background-attackment .overlay-content a:hover{
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #000;
+}
+
+.facility-area{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    padding: 30px 0;
+    background-color: #F4F4F4;
+    align-items: center;
+}
+
+.facility-area .facility-slide .facility-items{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    outline: none;
+   
+}
+
+.facility-area .facility-slide .facility-items .facility-img{
+    display: block;
+    padding: 0 10px 30px 10px ;
+    overflow: hidden;
+}
+
+.facility-area .facility-slide .facility-items .facility-img:hover{
+    color: aqua;
+}
+
+.facility-area .facility-slide .facility-items span{
+    font-size: 1.2em;
+    padding: 0;
+    margin-bottom: 0;
+}
+
+.our-partners{
+    width: 100%;
+    margin: 40px auto;
+    padding:60px 0;
+    background-color: #F4F4F4;
+    align-items: center;
+}
+
+.our-partners .partners-title{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.our-partners .our-partners-slide .partners-img{
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    border: none;
+    outline: none;
+}
+
