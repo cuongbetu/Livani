@@ -3,10 +3,12 @@
 body {
     font-family: 'Lato', sans-serif;
     background-color: #FFFFFF;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .top-header {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     background-color: #000;
 }
@@ -65,6 +67,7 @@ body {
     font-size: .8em;
     align-items: center;
     justify-content: flex-end;
+    cursor: pointer;
 }
 
 .top-header .header-top-menu li:hover{
@@ -78,11 +81,12 @@ body {
 
 .main-nav {
     display: flex;
-    width: 100%;
+    max-width: 100%;
     height: auto;
     margin: 0;
     padding: 10px 0;
     background-color: #fff;
+    border-bottom: 1px solid #000;
 }
 
 .main-nav .my-nav {
@@ -120,7 +124,7 @@ body {
 }
 
 .categories-banner-area {
-    width: 100%;
+    max-width: 100%;
     height: 100%;
     padding: 4em 0;
 }
@@ -207,7 +211,7 @@ body {
 }
 
 .product-area{
-    width: 100%;
+    max-width: 100%;
     height: auto;
     box-sizing: border-box;
 }
@@ -327,13 +331,14 @@ body {
 
 .background-attackment{
     position: relative;
-    width: 100%;
+    max-width: 100%;
     min-height: 40em;
     background-image: url("../images/offer-background/offer.jpg");
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     object-fit: cover;
+    overflow: hidden;
 }
 
 .background-attackment .overlay-background-attackment{
@@ -393,7 +398,7 @@ body {
 }
 
 .facility-area{
-    width: 100%;
+    max-width: 100%;
     height: auto;
     margin: 0 auto;
     padding: 30px 0;
@@ -412,8 +417,24 @@ body {
 
 .facility-area .facility-slide .facility-items .facility-img{
     display: block;
-    padding: 0 10px 30px 10px ;
+    position: relative;
+    padding: 30px ;
     overflow: hidden;
+    /* border: 1px solid #FE7981; */
+    border-radius: 50%;
+    z-index: 23;
+    background-color: #fff;
+}
+
+.facility-area .facility-slide .facility-items .facility-img::after{
+    content: "";
+    z-index: 21;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
 }
 
 .facility-area .facility-slide .facility-items .facility-img:hover{
@@ -424,10 +445,11 @@ body {
     font-size: 1.2em;
     padding: 0;
     margin-bottom: 0;
+    color: #000;
 }
 
 .our-partners{
-    width: 100%;
+    max-width: 100%;
     margin: 40px auto;
     padding:60px 0;
     background-color: #F4F4F4;
@@ -445,5 +467,190 @@ body {
     justify-content: center;
     border: none;
     outline: none;
+}
+
+.blog-area{
+    max-width: 100%;
+}
+
+.blog-area .blog-title{
+    width: 100%;
+    height: auto;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.blog-area .blog-title span{
+    color: #FE7981;
+}
+
+.blog-area .blog-post{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0!important ;
+    padding: 0;
+}
+
+.blog-area .blog-post .single-post{
+    margin: 0 10px;
+    width: calc(33.33% - 20px);
+    position: relative;
+    overflow: hidden;
+}
+
+.blog-area .blog-post .single-post .post-img a{
+    display: block;
+   
+}
+
+
+.blog-area .blog-post .single-post .post-img a img{
+    transition: .8s;
+   
+}
+
+
+.blog-area .blog-post .single-post .date{
+    position: absolute;
+    top: 5%;
+    right: -35%;
+    width: 35%;
+    height: auto;
+    padding: 10px;
+    z-index: 5; 
+    background-color: #fff;
+    transition: .8s;
+}
+
+.blog-area .blog-post .single-post .date span{
+    color: #000;
+    font-style: italic ;
+}
+
+.blog-area .blog-post .single-post:hover .date{
+    right: 0%;
+}
+
+.blog-area .blog-post .single-post:hover .post-img a img {
+    transform: rotate(5deg);
+}
+
+.blog-area .blog-post .single-post .post-content{
+    display: flex;
+    flex-direction: column;
+    line-height: 30px;
+}
+
+.blog-area .blog-post .single-post .post-content .tag{
+    color: #FE7981;
+}
+
+.blog-area .blog-post .single-post .post-content .title{
+    font-size: 20px;
+    cursor: pointer;
+    transition: .8s;
+}
+
+.blog-area .blog-post .single-post .post-content .title:hover{
+    color: #FE7981;
+}
+
+.instagram-area{
+    width: 100%;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.instagram-area .instagram-slide{
+    margin: 40px 0;
+}
+
+footer {
+    font-family: 'Cabin', sans-serif;
+    display: flex;
+    width: 100%;
+    height: auto;
+    padding:40px 0;
+    justify-content: space-between;
+    border-top: 1px solid black;
+}
+
+footer h3 {
+    text-transform: capitalize;
+    border-bottom: 1px solid linear-gradient(red, transparent);
+}
+
+footer .contact {}
+
+footer .contact ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .contact .contact-items {
+    text-transform: capitalize;
+}
+
+footer .contact .contact-items i {
+    margin-right: 4px;
+}
+
+footer .category {}
+
+footer .category ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .category .category-items {
+    text-transform: capitalize;
+}
+
+footer .tabble-of-content {}
+
+footer .tabble-of-content ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer .tabble-of-content .tabble-of-content-items {
+    text-transform: capitalize;
+}
+
+footer .link:not(:last-child) {
+    border-right: 1px solid darkgray;
+}
+
+footer .link ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+footer ul li a {
+    text-decoration: none;
+    color: #000;
+}
+
+footer .link .link-items {
+    text-transform: capitalize;
+}
+
+#finally {
+    width: 100%;
+    background-color: #000;
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid darkgray;
+}
+
+#finally span {
+    text-transform: capitalize;
+    color: #fff;
 }
 

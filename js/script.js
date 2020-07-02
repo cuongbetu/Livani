@@ -37,6 +37,17 @@ $(document).ready(function() {
       ]
    });
 
+   $('.instagram-slide').slick({
+      arrows : false,
+      slidesToShow : 4,
+      slidesToScroll : 1,
+      pauseOnHover : false,
+      autoplay : true,
+      autolaySpeed : 3000,
+   });
+
+
+
    $('.facility-slide').slick({
        arrows : false,
        slidesToShow : 4,
